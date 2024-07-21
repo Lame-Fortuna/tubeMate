@@ -1,0 +1,295 @@
+
+body{
+    background-image: (at top right, slategray, white);
+}
+input{   
+    overflow: auto;
+}
+header{
+    border-radius: 15px;
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+header ul{
+    color: azure;
+    display: flex; 
+    background-color: rgb(161, 51, 51);
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    margin: 0 2px 0 0;
+}
+header li{
+    display: flex;
+    align-items: center;
+    margin:0 5px;
+    text-decoration: none;
+}
+header li:hover{
+    background-color: maroon;
+} 
+header a{
+    font-size: 20px;
+    font-style: normal;
+    color: azure;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+header ul li a {
+    text-decoration: none;
+}
+#utube{
+    height: 35px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container{    
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 50px;
+}
+.a{
+    display: flex;
+}
+.a #in{
+    color: white;
+    padding-left: 15px;
+    background-color: rgb(70, 68, 68);
+    border: 2px solid;
+    border-radius: 35px 0 0 35px;
+}
+::placeholder{
+    opacity: 1;
+    padding: 5px 35px;
+    color: rgb(190, 185, 185);
+}
+#format{
+    color: aliceblue;
+    padding: 8px 12px;
+    margin-left: 1px;
+    background-color: rgb(31, 60, 71);
+    border-radius: 0 35px 35px 0;
+}
+.container img{
+    max-width: 40%;  
+    margin: 15px;     
+}
+
+footer{
+    color: white;
+    border: solid black;
+    background-color: rgb(70, 68, 68);
+    padding: 15px 5px;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 20px;
+}
+footer li{
+    padding: 2px 5px;
+    margin: 0;
+    display:inline-block;
+    border-collapse: collapse;
+}
+
+/*644 x 600*/
+@media (min-width:750px) {
+    .hyde{
+        display:block;
+        border: solid;
+    }
+    .container{  
+        font-size: 35px;
+    }
+    header a{
+        padding: 20px;
+        font-size: 25px;
+    }  
+    .a img{
+        max-width: 65%;
+        margin: 15px;        
+    }
+    #btn{
+        font-size: 25px;
+        padding: 15px;
+        border-radius: 25px;
+    }
+}
+
+/*---- Part 2 ------------------------------------------------------------------------------------------------------------------------*/
+
+.cont{
+    margin: 15px 0 15px 0;
+}
+
+.opt-cont{
+    margin: auto;
+    width: 95%;
+    display: flex;
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 20px;   
+}
+
+.data{      
+    padding: 10px 40px;
+    width: 50%;
+    height: fit-content;
+}
+#link{  
+    display: flex;
+    align-items: baseline;
+}
+#meta-data{
+    display: none;
+}
+
+#meta-data input{
+    margin: 3px;
+}
+#collapsible{
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+.active, #collapsible:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+#collapsible:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+#meta-data{
+    text-align: right;
+    width: fit-content;
+    margin-left: 5px;
+}
+label{
+    margin-right: 5px;
+    font-weight: 500;
+}
+.link #in{
+    width: 85%;
+}
+
+.preview{
+    width: 50%;
+    height: fit-content;
+    padding: 10px;
+}
+#vid{
+    margin-bottom: 23px;
+}
+#pre1{
+    width: 650px;
+    height: 350px;
+    max-width: 100%;
+
+}
+#quality{
+    display: flex;
+    align-items: baseline;
+}
+#b1{
+    text-align: center;
+    margin: 5px 10px; 
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width:1250px) {
+    .data, .preview{
+        padding: 15px;
+    }
+    .opt-cont label{
+        text-align: left;
+    }
+}
+
+@media (max-width:870px) {
+    .cont{
+        margin: 0;
+    }
+    .opt-cont{
+        flex-direction: column;
+        width: 80%;
+        border: none;
+    }
+    .data, .preview{
+        width: 100%;
+        margin: auto;
+        border: solid;
+    }
+}
+
+@media (max-width:640px) {
+    .opt-cont{
+        width: 95%;
+    }
+    .data, .preview{
+        width: 100%;
+        margin: auto;
+    }
+    .data{
+        padding: 15px;
+    }
+}
+
+
+
+/*---- Part 3 ----------------------------------------------------------------------------------------------------------------------------------*/
+
+.options{
+    margin: auto;
+    width: 40%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.preview2{
+    margin: auto;
+    width: 60%;
+    height: fit-content;
+    padding: 10px;
+}
+#pre2{
+    width: 880px;
+    height: 450px;
+}
+#main{
+    text-align: left;
+    margin-left: 30px;
+}
+
+@media (max-width:870px) {
+    .options{
+        width: 80%;
+        border: 2px solid;
+    }
+    .preview2{
+        width: 80%;
+        margin: auto;
+        border: 2px solid;
+    }
+}
