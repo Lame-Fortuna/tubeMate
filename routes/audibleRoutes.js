@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const audioController = require('../controllers/audioController');
+const audioController = require('../controllers/audible');
 
 router.get('/audio/', audioController.renderAudioPage);
 router.get('/audio/:vidId', audioController.renderAudioPageWithVidId);
