@@ -1,19 +1,19 @@
 const { exec } = require('youtube-dl-exec');
-const fetch = require('node-fetch');
 
 const getVideoTitle = async (videoUrl) => {
+    const youtubedl = require('youtube-dl-exec')
     try {
-        const response = await fetch(videoUrl);
-        const html = await response.text();
-        const titleMatch = html.match(/<title>(.*?)<\/title>/i);
-        const title = titleMatch ? titleMatch[1] : 'Video Title Not Found';
-        console.log('Video Title:', title);
-        return title.slice(0, title.length - 10);
+        const info = await youtubedl(videoUrl, {
+            dumpSingleJson: true,
+            noWarnings: true,
+            // You can add more options here if needed
+        });
+        return info.title;
     } catch (error) {
-        console.error('Error fetching video title:', error.message);
+        console.error('Error fetching YouTube title:', error);
         return null;
     }
-};
+}
 
 const renderVideoPage = (req, res) => {
     res.render("yt-video", { vidId: "", title: "" });
