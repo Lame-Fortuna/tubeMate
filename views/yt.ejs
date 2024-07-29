@@ -9,38 +9,40 @@
     </head>
 
     <body> 
-        <header>
-            <ul>
-                <li><a href="./" style="text-decoration: none;"><img class="logo" src="/logo2.png">Tubemate</a></li>
-                <li><a href="/playlist">Play List</a></li>
-                <li><a href="https://www.youtube.com/" target=”_blank”><img id="utube" src="youtube.png"></a></li>
-                <li style="flex-grow: 1; border:none"> </li>
-                <li><a href="">Copyrights</a></li>
-            </ul>
-        </header>
-
-        <form class="container" onsubmit="route(event)">
-            <img src="logo.png">
-            <div class="a">
-                <input id="in" type="text" placeholder="Youtube Link...">
-                <select id="format">
-                    <option value="1">Audio</option>
-                    <option value="2">Video</option>
-                </select>
-            </div>
+        <div class="box">
+            <header>
+                <ul>
+                    <li><a href="./" style="text-decoration: none;"><img class="logo" src="/logo2.png">Tubemate</a></li>
+                    <li><a href="/playlist">Play List</a></li>
+                    <li><a href="https://www.youtube.com/" target=”_blank”><img id="utube" src="youtube.png"></a></li>
+                    <li style="flex-grow: 1; border:none"> </li>
+                    <li><a href="">Copyrights</a></li>
+                </ul>
+            </header>
+    
+            <form class="container" onsubmit="route(event)">
+                <img src="logo.png">
+                <div class="a">
+                    <input id="in" type="text" placeholder="Youtube Link...">
+                    <select id="format">
+                        <option value="1">Audio</option>
+                        <option value="2">Video</option>
+                    </select>
+                </div>
+                
+                <button id="btn" class="btn btn-info" type="submit" style="margin-top: 9px;">Generate</button>
+            </form>
             
-            <button id="btn" class="btn btn-info" type="submit" style="margin-top: 9px;">Generate</button>
-        </form>
-        
-        <footer>
-            <ul>
-                <li>To download YouTube videos, follow these steps:</li><br>
-                <li>1. Go to YouTube.com and find the video you want to download. Copy the video URL from the browser's address bar(eg. https://www.youtube.com/watch?v=aBKEt3MhNMM).</li>
-                <li>2. Paste the video URL into search bar and select your desired download format (MP3 or MP4). If no format is chosen, the video will be converted to MP3 by default. Then, click the "Generate" button.</li>
-                <li>3. The video conversion will begin, and it may take some time. Please note that only YouTube videos with a maximum length of 3 hours can be downloaded. Once the conversion is complete, you can download the converted video.</li>
-                <li>By using this, you agree to our Terms of Use. We appreciate your use of our YouTube Converter.</li>
-            </ul>
-        </footer>
+            <footer>
+                <ul>
+                    <li>To download YouTube videos, follow these steps:</li><br>
+                    <li>1. Go to YouTube.com and find the video you want to download. Copy the video URL from the browser's address bar(eg. https://www.youtube.com/watch?v=aBKEt3MhNMM).</li>
+                    <li>2. Paste the video URL into search bar and select your desired download format (MP3 or MP4). If no format is chosen, the video will be converted to MP3 by default. Then, click the "Generate" button.</li>
+                    <li>3. The video conversion will begin, and it may take some time. Please note that only YouTube videos with a maximum length of 3 hours can be downloaded. Once the conversion is complete, you can download the converted video.</li>
+                    <li>By using this, you agree to our Terms of Use. We appreciate your use of our YouTube Converter.</li>
+                </ul>
+            </footer>
+        </div>
     </body>
 
     <script>

@@ -7,7 +7,6 @@ const getVideoTitle = async (videoUrl) => {
         const info = await youtubedl(videoUrl, {
             dumpSingleJson: true,
             noWarnings: true,
-            // You can add more options here if needed
         });
         return info.title;
     } catch (error) {
@@ -16,11 +15,11 @@ const getVideoTitle = async (videoUrl) => {
     }
 }
 
-const renderAudioPage = (req, res) => {
+const page1 = (req, res) => {
     res.render("yt-audio", { vidId: "", title: "" });
 };
 
-const renderAudioPageWithVidId = async (req, res) => {
+const page2 = async (req, res) => {
     try {
         const vidId = req.params.vidId;
         const title = await getVideoTitle(`https://www.youtube.com/watch?v=${vidId}`);
@@ -76,7 +75,7 @@ const convertAudio = (req, res) => {
 };
 
 module.exports = {
-    renderAudioPage,
-    renderAudioPageWithVidId,
+    page1,
+    page2,
     convertAudio
 };
