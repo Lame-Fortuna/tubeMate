@@ -2,17 +2,19 @@
 body{
     background-image: (at top right, slategray, white);
 }
+.box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 input{   
     overflow: auto;
 }
 header{
     border-radius: 15px;
     font-size: 20px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
 }
 header ul{
     color: azure;
@@ -95,10 +97,6 @@ footer{
     border: solid black;
     background-color: rgb(70, 68, 68);
     padding: 15px 5px;
-    margin: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     font-size: 20px;
 }
 footer li{
@@ -135,7 +133,7 @@ footer li{
 /*---- Part 2 ------------------------------------------------------------------------------------------------------------------------*/
 
 .cont{
-    margin: 15px 0 15px 0;
+    margin: 12px 0 12px 0;
 }
 
 .opt-cont{
