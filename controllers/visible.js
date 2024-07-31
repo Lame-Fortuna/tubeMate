@@ -21,7 +21,12 @@ const Vpage1 = (req, res) => {
 const VPage2 = async (req, res) => {
     try {
         const vidId = req.params.vidId;
-        const title = await getVideoTitle(`https://www.youtube.com/watch?v=${vidId}`);
+        let title = await getVideoTitle(`https://www.youtube.com/watch?v=${vidId}`);
+
+        if (!title) {
+            console.error('Video title not found');
+            title= '';
+        }
         res.render("yt-video", { vidId, title });
     } catch (error) {
         console.error('Error fetching video details:', error);

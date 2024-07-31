@@ -22,10 +22,11 @@ const page1 = (req, res) => {
 const page2 = async (req, res) => {
     try {
         const vidId = req.params.vidId;
-        const title = await getVideoTitle(`https://www.youtube.com/watch?v=${vidId}`);
+        let title = await getVideoTitle(`https://www.youtube.com/watch?v=${vidId}`);
 
-        if (!title) {
-            throw new Error('Video title not found');
+        if (!title){
+            console.error('Video title not found');
+            title= '';
         }
 
         res.render("yt-audio", { vidId, title });
