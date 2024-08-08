@@ -1,6 +1,10 @@
-
+a {
+    text-decoration: none;
+    color: white;
+}
 body{
     background-image: (at top right, slategray, white);
+    margin: 0;
 }
 .box{
     height: 100%;
@@ -12,52 +16,51 @@ body{
 input{   
     overflow: auto;
 }
-header{
-    border-radius: 15px;
-    font-size: 20px;
-}
-header ul{
-    color: azure;
+.header{
+    position: sticky;
+    top: 0;
     display: flex; 
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(161, 51, 51);
-    border-radius: 0 0 5px 5px;
-    padding: 0;
+    box-shadow: 2px 2px black;
+    border-radius: 0 0 15px 15px;
+    color: azure;
+    padding: 0 10px;
 }
 .logo{
-    width: 40px;
     height: 40px;
-    margin: 0 2px 0 0;
+    width: 40px;
+    margin-right: 5px;
 }
-header li{
-    display: flex;
-    align-items: center;
-    margin:0 5px;
-    text-decoration: none;
-}
-header li:hover{
+.header button:hover{
     background-color: maroon;
 } 
-header a{
+.header button{
     font-size: 20px;
-    font-style: normal;
+    background-color: inherit;
+    border: none;
     color: azure;
+    height: 70px;
+    padding: 0 13px;
+    margin-right: 7px;
     display: flex;
     align-items: center;
-    padding: 15px;
     text-align: center;
 }
-header ul li a {
-    text-decoration: none;
+.hyde{
+    display: none;
+}
+#grow{
+    flex-grow: 1;
 }
 #utube{
     height: 35px;
     padding: 0;
-    margin: 0;
-
 }
 
 .container{    
-    font-size: 20px;
+    font-size: 40px;
     display:flex;
     flex-direction: column;
     height: fit-content;
@@ -71,6 +74,7 @@ header ul li a {
 .a #in{
     color: white;
     padding-left: 15px;
+    height: 50px;
     background-color: rgb(70, 68, 68);
     border: 2px solid;
     border-radius: 35px 0 0 35px;
@@ -105,28 +109,46 @@ footer li{
     display:inline-block;
     border-collapse: collapse;
 }
+#btn{
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 25px;
+}
 
 /*644 x 600*/
 @media (min-width:750px) {
     .hyde{
         display:block;
-        border: solid;
+    }
+    #grow:hover{
+        background-color: inherit;
+    }
+    #grow{
+        flex-grow: 1;
+    }
+    #utube{  
+        margin: 0 10px;
     }
     .container{  
         font-size: 35px;
     }
-    header a{
-        padding: 20px;
-        font-size: 25px;
-    }  
-    .a img{
-        max-width: 65%;
-        margin: 15px;        
+    .header button{
+        height: 100px;
+        font-size: 30px;
+        padding: 0 15px;
+        margin-right: 3px;
     }
     #btn{
         font-size: 25px;
         padding: 15px;
         border-radius: 25px;
+    }
+    .a select{
+        font-size: 30px;
+    }
+    .a #in{
+        font-size: 35px;
+        padding: 30px;
     }
 }
 
@@ -227,15 +249,14 @@ label{
 
 @media (max-width:870px) {
     .cont{
-        margin: 0;
+        margin: 10px 0;
     }
     .opt-cont{
         flex-direction: column;
-        width: 80%;
         border: none;
     }
     .data, .preview{
-        width: 100%;
+        width: 90%;
         margin: auto;
         border: solid;
     }
@@ -244,10 +265,6 @@ label{
 @media (max-width:640px) {
     .opt-cont{
         width: 95%;
-    }
-    .data, .preview{
-        width: 100%;
-        margin: auto;
     }
     .data{
         padding: 15px;
@@ -281,12 +298,8 @@ label{
 }
 
 @media (max-width:870px) {
-    .options{
-        width: 80%;
-        border: 2px solid;
-    }
-    .preview2{
-        width: 80%;
+    .preview2, .options{
+        width: 95%;
         margin: auto;
         border: 2px solid;
     }

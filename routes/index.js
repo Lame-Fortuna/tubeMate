@@ -5,7 +5,8 @@ const router = express.Router();
 // Home Route
 router.get('/', (req, res) => {
     const remove = () => {
-        fs.rm('files', { recursive: true }, (error) => {
+        
+        fs.rm('files', (error) => {
             if (error) {
                 console.log('Error deleting contents of files because: ', error);
             } else {

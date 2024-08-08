@@ -10,15 +10,13 @@
 
     <body> 
         <div class="box">
-            <header>
-                <ul>
-                    <li><a href="./" style="text-decoration: none;"><img class="logo" src="/logo2.png">Tubemate</a></li>
-                    <li><a href="/playlist">Play List</a></li>
-                    <li><a href="https://www.youtube.com/" target=”_blank”><img id="utube" src="youtube.png"></a></li>
-                    <li style="flex-grow: 1; border:none"> </li>
-                    <li><a href="">Copyrights</a></li>
-                </ul>
-            </header>
+            <div class="header">
+                <a href="/"><button><img class="logo" src="/logo2.png"><p class="hyde">TubeMate</p></button></a>
+                <a href="/playlist"><button>Play List</button></a>
+                <a href="https://www.youtube.com/" target=”_blank”><button><img id="utube" src="youtube.png"></button></a>
+                <button id='grow' class="hyde"></button>
+                <a href=""><button>Copyrights</button></a>
+            </div>
     
             <form class="container" onsubmit="route(event)">
                 <img src="logo.png">
